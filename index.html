@@ -41,6 +41,7 @@
     </script>
     <link rel="icon" type="image/png" href="./assets/mijialan-icon.png" />
     <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./analytics.js"></script>
   </head>
   <body>
     <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -104,6 +105,7 @@
             <a
               class="button button-primary"
               href="https://github.com/iPocket-APP/MijiaLAN/releases/download/v0.1.8/MijiaLAN-0.1.8-universal.dmg"
+              data-download-placement="hero"
             >
               <svg class="icon" aria-hidden="true"><use href="#icon-download" /></svg> 下载 macOS 版
             </a>
@@ -270,6 +272,7 @@
               <a
                 class="button button-primary"
                 href="https://github.com/iPocket-APP/MijiaLAN/releases/download/v0.1.8/MijiaLAN-0.1.8-universal.dmg"
+                data-download-placement="download_section"
               >
                 <svg class="icon" aria-hidden="true"><use href="#icon-download" /></svg> 下载 macOS 版
               </a>
@@ -354,8 +357,40 @@
         <nav class="footer-links" aria-label="页脚导航">
           <a href="https://ipocket.xyz/">iPocket</a>
           <a href="https://github.com/iPocket-APP/MijiaLAN">GitHub</a>
-          <a href="https://github.com/iPocket-APP/MijiaLAN/blob/main/PRIVACY.md">隐私说明</a>
+          <a href="https://github.com/iPocket-APP/MijiaLAN/blob/main/PRIVACY.md">App 隐私说明</a>
+          <button
+            type="button"
+            data-analytics-settings
+            aria-controls="analytics-consent"
+            aria-expanded="false"
+            hidden
+          >
+            网站分析设置
+          </button>
         </nav>
+      </div>
+      <div class="shell">
+        <section
+          class="analytics-consent"
+          id="analytics-consent"
+          aria-labelledby="analytics-title"
+          tabindex="-1"
+          hidden
+        >
+          <h2 id="analytics-title">网站分析设置</h2>
+          <p>
+            网站分析默认关闭。允许后，Google Analytics 会使用 Cookie 统计页面访问和安装包按钮点击。
+            <a href="https://policies.google.com/technologies/partner-sites?hl=zh-CN">Google 如何使用数据</a>
+          </p>
+          <div class="analytics-actions">
+            <button class="button analytics-reject" type="button" data-analytics-choice="deny">
+              关闭分析
+            </button>
+            <button class="button button-primary" type="button" data-analytics-choice="allow">
+              允许分析
+            </button>
+          </div>
+        </section>
       </div>
     </footer>
   </body>

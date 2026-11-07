@@ -32,6 +32,7 @@
     <meta name="twitter:image:alt" content="The MijiaLAN icon next to a living room lit by a desk lamp." />
     <link rel="icon" type="image/png" href="../assets/mijialan-icon.png" />
     <link rel="stylesheet" href="../styles.css" />
+    <script defer src="../analytics.js"></script>
   </head>
   <body>
     <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -98,6 +99,7 @@
             <a
               class="button button-primary"
               href="https://github.com/iPocket-APP/MijiaLAN/releases/download/v0.1.8/MijiaLAN-0.1.8-universal.dmg"
+              data-download-placement="hero"
             >
               <svg class="icon" aria-hidden="true"><use href="#icon-download" /></svg> Download for macOS
             </a>
@@ -287,6 +289,7 @@
               <a
                 class="button button-primary"
                 href="https://github.com/iPocket-APP/MijiaLAN/releases/download/v0.1.8/MijiaLAN-0.1.8-universal.dmg"
+                data-download-placement="download_section"
               >
                 <svg class="icon" aria-hidden="true"><use href="#icon-download" /></svg> Download for macOS
               </a>
@@ -378,8 +381,41 @@
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="https://ipocket.xyz/">iPocket</a>
           <a href="https://github.com/iPocket-APP/MijiaLAN">GitHub</a>
-          <a href="https://github.com/iPocket-APP/MijiaLAN/blob/main/PRIVACY.en.md">Privacy</a>
+          <a href="https://github.com/iPocket-APP/MijiaLAN/blob/main/PRIVACY.en.md">App privacy</a>
+          <button
+            type="button"
+            data-analytics-settings
+            aria-controls="analytics-consent"
+            aria-expanded="false"
+            hidden
+          >
+            Analytics settings
+          </button>
         </nav>
+      </div>
+      <div class="shell">
+        <section
+          class="analytics-consent"
+          id="analytics-consent"
+          aria-labelledby="analytics-title"
+          tabindex="-1"
+          hidden
+        >
+          <h2 id="analytics-title">Analytics settings</h2>
+          <p>
+            Analytics is off by default. If you allow it, Google Analytics uses cookies to measure page visits
+            and installer button clicks.
+            <a href="https://policies.google.com/technologies/partner-sites?hl=en">How Google uses data</a>
+          </p>
+          <div class="analytics-actions">
+            <button class="button analytics-reject" type="button" data-analytics-choice="deny">
+              Turn off analytics
+            </button>
+            <button class="button button-primary" type="button" data-analytics-choice="allow">
+              Allow analytics
+            </button>
+          </div>
+        </section>
       </div>
     </footer>
   </body>

@@ -755,13 +755,70 @@ h2 {
   font-size: 13px;
   font-weight: 630;
 }
-.footer-links a {
+.footer-links a,
+.footer-links button:not([hidden]) {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
 }
-.footer-links a:hover {
+.footer-links button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.footer-links a:hover,
+.footer-links button:hover {
   color: var(--green);
+}
+
+.analytics-consent {
+  max-width: 510px;
+  margin-inline-start: auto;
+  margin-block-end: 24px;
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+}
+.analytics-consent h2 {
+  margin: 0;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+}
+.analytics-consent p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.analytics-consent p a {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.analytics-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.analytics-actions .button {
+  min-height: 44px;
+  padding-inline: 12px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.analytics-reject {
+  border-color: var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+.analytics-reject:hover {
+  background: var(--soft);
 }
 
 @media (max-width: 1080px) {
