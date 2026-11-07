@@ -41,6 +41,7 @@
     </script>
     <link rel="icon" type="image/png" href="./assets/mijialan-icon.png" />
     <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./downloads.js"></script>
     <script defer src="./analytics.js"></script>
   </head>
   <body>
@@ -48,6 +49,8 @@
       <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" /></symbol>
       <symbol id="icon-external" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10" /></symbol>
       <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4" /></symbol>
+      <symbol id="icon-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></symbol>
       <symbol id="icon-wifi" viewBox="0 0 24 24">
         <path d="M3 8a14 14 0 0 1 18 0M6 12a9 9 0 0 1 12 0m-9 4a4.4 4.4 0 0 1 6 0m-3 4h.01" />
       </symbol>
@@ -98,23 +101,73 @@
         <div class="hero-copy">
           <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> 米家局域网桥</p>
           <h1 id="hero-title">米家设备，<span>接入 Apple 家庭。</span></h1>
-          <p class="hero-description">
-            从 Mac 菜单栏开灯、调亮度。控制指令通过局域网直接发给米家 Wi‑Fi 设备。
-          </p>
-          <div class="hero-actions">
+          <p class="hero-description">在电脑上开灯、调亮度。控制指令通过局域网直接发给米家 Wi‑Fi 设备。</p>
+          <div class="hero-actions" data-platform-picker>
             <a
               class="button button-primary"
-              href="https://github.com/iPocket-APP/MijiaLAN/releases/download/v0.1.8/MijiaLAN-0.1.8-universal.dmg"
+              href="#download"
+              data-hero-download
               data-download-placement="hero"
+              aria-describedby="hero-requirements"
             >
-              <svg class="icon" aria-hidden="true"><use href="#icon-download" /></svg> 下载 macOS 版
+              <svg class="icon" aria-hidden="true"><use href="#icon-download" /></svg>
+              <span>选择下载平台</span>
             </a>
+            <button
+              type="button"
+              class="button platform-toggle"
+              data-platform-toggle
+              aria-controls="download-platforms"
+              aria-expanded="false"
+              hidden
+            >
+              <span>其他平台</span>
+              <svg class="icon" aria-hidden="true"><use href="#icon-chevron" /></svg>
+            </button>
+            <div class="platform-picker" id="download-platforms" role="group" aria-label="下载平台" hidden>
+              <button
+                type="button"
+                data-option-platform="macos"
+                data-label="下载 macOS 版"
+                data-requirements="macOS 15 及以上 · Apple Silicon 与 Intel"
+                aria-pressed="false"
+              >
+                <strong>macOS</strong>
+                <small>正式版 · Universal DMG</small>
+                <svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg>
+              </button>
+              <button
+                type="button"
+                data-option-platform="windows"
+                data-label="下载 Windows 版"
+                data-requirements="体验版 · Windows x64 · MSI"
+                data-release-label="安装说明"
+                aria-pressed="false"
+              >
+                <strong>Windows</strong>
+                <small>体验版 · x64 MSI</small>
+                <svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg>
+              </button>
+              <button
+                type="button"
+                data-option-platform="linux"
+                data-label="下载 Linux 版"
+                data-requirements="体验版 · Debian 12 / Ubuntu 24.04 · x86-64 · DEB"
+                data-release-label="其他格式"
+                aria-pressed="false"
+              >
+                <strong>Linux</strong>
+                <small>体验版 · x86-64 DEB</small>
+                <svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg>
+              </button>
+            </div>
             <a class="text-link" href="#setup"
               >如何使用 <svg class="icon" aria-hidden="true"><use href="#icon-arrow" /></svg
             ></a>
           </div>
-          <p class="hero-requirements">
-            macOS 15 及以上 <span aria-hidden="true">·</span> Apple Silicon 与 Intel
+          <p class="hero-requirements" id="hero-requirements">
+            <span data-hero-requirements>macOS、Windows 和 Linux</span>
+            <a data-hero-release href="https://github.com/iPocket-APP/MijiaLAN/releases" hidden>发行说明</a>
           </p>
         </div>
 
@@ -273,13 +326,16 @@
                 class="button button-primary"
                 href="https://github.com/iPocket-APP/MijiaLAN/releases/download/v0.1.8/MijiaLAN-0.1.8-universal.dmg"
                 data-download-placement="download_section"
+                data-download-platform="macos"
               >
                 <svg class="icon" aria-hidden="true"><use href="#icon-download" /></svg> 下载 macOS 版
               </a>
             </div>
             <ul class="platform-links" aria-label="其他平台">
               <li>
-                <a href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-v0.1.0-b14"
+                <a
+                  id="release-windows"
+                  href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-v0.1.0-b14"
                   ><span>Windows</span
                   ><span class="platform-status"
                     >Rust 体验版
@@ -287,7 +343,9 @@
                 ></a>
               </li>
               <li>
-                <a href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-linux-v0.1.0-b1"
+                <a
+                  id="release-linux"
+                  href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-linux-v0.1.0-b1"
                   ><span>Linux</span
                   ><span class="platform-status"
                     >Rust 体验版

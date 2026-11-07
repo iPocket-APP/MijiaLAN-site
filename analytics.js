@@ -102,11 +102,11 @@
 
   for (const link of document.querySelectorAll("[data-download-placement]")) {
     link.addEventListener("click", () => {
-      if (!tagRequested || window[disableKey]) return;
+      if (!tagRequested || window[disableKey] || link.origin !== "https://github.com") return;
       window.gtag("event", "download_click", {
         send_to: measurementId,
         app_slug: "mijialan",
-        platform: "macos",
+        platform: link.dataset.downloadPlatform || "macos",
         store: "github",
         locale: document.documentElement.lang,
         placement: link.dataset.downloadPlacement,
