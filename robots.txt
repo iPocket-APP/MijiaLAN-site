@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mijialan.ipocket.xyz/sitemap.xml
