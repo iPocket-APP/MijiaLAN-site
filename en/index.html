@@ -31,9 +31,9 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image:alt" content="The MijiaLAN icon next to a living room lit by a desk lamp." />
     <link rel="icon" type="image/png" href="../assets/mijialan-icon.png" />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../styles.css?v=regional-analytics" />
     <script defer src="../downloads.js"></script>
-    <script defer src="../analytics.js"></script>
+    <script defer src="../analytics.js?v=regional-analytics"></script>
   </head>
   <body>
     <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -452,7 +452,7 @@
           <a href="https://github.com/iPocket-APP/MijiaLAN/blob/main/PRIVACY.en.md">App privacy</a>
           <button
             type="button"
-            data-analytics-settings
+            data-analytics-settings="regional"
             aria-controls="analytics-consent"
             aria-expanded="false"
             hidden
@@ -471,15 +471,15 @@
         >
           <h2 id="analytics-title">Analytics settings</h2>
           <p>
-            Analytics is off by default. If you allow it, Google Analytics uses cookies to measure page visits
-            and installer button clicks.
+            Google Analytics uses cookies to measure page visits and installer button clicks. You can change
+            your choice any time from the footer.
             <a href="https://policies.google.com/technologies/partner-sites?hl=en">How Google uses data</a>
           </p>
           <div class="analytics-actions">
-            <button class="button analytics-reject" type="button" data-analytics-choice="deny">
+            <button class="button analytics-choice" type="button" data-analytics-choice="deny">
               Turn off analytics
             </button>
-            <button class="button button-primary" type="button" data-analytics-choice="allow">
+            <button class="button analytics-choice" type="button" data-analytics-choice="allow">
               Allow analytics
             </button>
           </div>

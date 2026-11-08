@@ -40,9 +40,9 @@
       }
     </script>
     <link rel="icon" type="image/png" href="./assets/mijialan-icon.png" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=regional-analytics" />
     <script defer src="./downloads.js"></script>
-    <script defer src="./analytics.js"></script>
+    <script defer src="./analytics.js?v=regional-analytics"></script>
   </head>
   <body>
     <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -418,7 +418,7 @@
           <a href="https://github.com/iPocket-APP/MijiaLAN/blob/main/PRIVACY.md">App 隐私说明</a>
           <button
             type="button"
-            data-analytics-settings
+            data-analytics-settings="regional"
             aria-controls="analytics-consent"
             aria-expanded="false"
             hidden
@@ -437,14 +437,14 @@
         >
           <h2 id="analytics-title">网站分析设置</h2>
           <p>
-            网站分析默认关闭。允许后，Google Analytics 会使用 Cookie 统计页面访问和安装包按钮点击。
+            Google Analytics 使用 Cookie 统计页面访问和安装包按钮点击。你可以随时在页脚更改选择。
             <a href="https://policies.google.com/technologies/partner-sites?hl=zh-CN">Google 如何使用数据</a>
           </p>
           <div class="analytics-actions">
-            <button class="button analytics-reject" type="button" data-analytics-choice="deny">
-              关闭分析
+            <button class="button analytics-choice" type="button" data-analytics-choice="deny">
+              不允许分析
             </button>
-            <button class="button button-primary" type="button" data-analytics-choice="allow">
+            <button class="button analytics-choice" type="button" data-analytics-choice="allow">
               允许分析
             </button>
           </div>

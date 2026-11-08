@@ -862,6 +862,17 @@ h2 {
   border-radius: 16px;
   background: var(--paper);
 }
+.analytics-banner {
+  position: fixed;
+  inset-inline-end: var(--gutter);
+  inset-block-end: max(16px, env(safe-area-inset-bottom));
+  z-index: 6;
+  width: min(420px, calc(100% - var(--gutter) * 2));
+  max-block-size: calc(100dvh - 32px);
+  margin: 0;
+  overflow: auto;
+  box-shadow: 0 12px 28px #142c2526;
+}
 .analytics-consent h2 {
   margin: 0;
   font-size: 19px;
@@ -891,12 +902,12 @@ h2 {
   font-size: 13px;
   cursor: pointer;
 }
-.analytics-reject {
+.analytics-choice {
   border-color: var(--line);
   background: var(--paper);
   color: var(--ink);
 }
-.analytics-reject:hover {
+.analytics-choice:hover {
   background: var(--soft);
 }
 
