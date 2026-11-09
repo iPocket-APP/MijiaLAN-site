@@ -14,9 +14,9 @@
   const installers = {
     macos: document.querySelector('[data-download-platform="macos"]').href,
     windows:
-      "https://github.com/iPocket-APP/MijiaLAN/releases/download/rs-v0.1.0-b14/MijiaLAN-rs-0.1.0-b14-windows-x86_64.msi",
+      "https://github.com/iPocket-APP/MijiaLAN/releases/download/rs-v0.2.0-b16/MijiaLAN-rs-0.2.0-b16-windows-x86_64.msi",
     linux:
-      "https://github.com/iPocket-APP/MijiaLAN/releases/download/rs-linux-v0.1.0-b1/MijiaLAN-rs-0.1.0-b1-linux-x86_64.deb",
+      "https://github.com/iPocket-APP/MijiaLAN/releases/download/rs-v0.2.0-b16/MijiaLAN-rs-0.2.0-b16-linux-x86_64.deb",
   };
 
   function desktopPlatform() {

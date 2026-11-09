@@ -41,7 +41,7 @@
     </script>
     <link rel="icon" type="image/png" href="./assets/mijialan-icon.png" />
     <link rel="stylesheet" href="./styles.css?v=regional-analytics" />
-    <script defer src="./downloads.js"></script>
+    <script defer src="./downloads.js?v=rs-0.2.0-b16"></script>
     <script defer src="./analytics.js?v=regional-analytics"></script>
   </head>
   <body>
@@ -140,24 +140,24 @@
                 type="button"
                 data-option-platform="windows"
                 data-label="下载 Windows 版"
-                data-requirements="体验版 · Windows x64 · MSI"
+                data-requirements="正式版 · Windows x64 · MSI"
                 data-release-label="安装说明"
                 aria-pressed="false"
               >
                 <strong>Windows</strong>
-                <small>体验版 · x64 MSI</small>
+                <small>正式版 · x64 MSI</small>
                 <svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg>
               </button>
               <button
                 type="button"
                 data-option-platform="linux"
                 data-label="下载 Linux 版"
-                data-requirements="体验版 · Debian 12 / Ubuntu 24.04 · x86-64 · DEB"
+                data-requirements="正式版 · Debian 12 / Ubuntu 24.04 · x86-64 · DEB"
                 data-release-label="其他格式"
                 aria-pressed="false"
               >
                 <strong>Linux</strong>
-                <small>体验版 · x86-64 DEB</small>
+                <small>正式版 · x86-64 DEB</small>
                 <svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg>
               </button>
             </div>
@@ -331,24 +331,32 @@
                 <svg class="icon" aria-hidden="true"><use href="#icon-download" /></svg> 下载 macOS 版
               </a>
             </div>
-            <ul class="platform-links" aria-label="其他平台">
+            <ul class="platform-links" aria-label="其他版本和平台">
+              <li>
+                <a href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-v0.2.0-b16"
+                  ><span>macOS（Rust）</span
+                  ><span class="platform-status"
+                    >0.2.0 正式版
+                    <svg class="icon" aria-hidden="true"><use href="#icon-external" /></svg></span
+                ></a>
+              </li>
               <li>
                 <a
                   id="release-windows"
-                  href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-v0.1.0-b14"
+                  href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-v0.2.0-b16"
                   ><span>Windows</span
                   ><span class="platform-status"
-                    >Rust 体验版
+                    >Rust 0.2.0 正式版
                     <svg class="icon" aria-hidden="true"><use href="#icon-external" /></svg></span
                 ></a>
               </li>
               <li>
                 <a
                   id="release-linux"
-                  href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-linux-v0.1.0-b1"
+                  href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-v0.2.0-b16"
                   ><span>Linux</span
                   ><span class="platform-status"
-                    >Rust 体验版
+                    >Rust 0.2.0 正式版
                     <svg class="icon" aria-hidden="true"><use href="#icon-external" /></svg></span
                 ></a>
               </li>

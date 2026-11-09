@@ -32,7 +32,7 @@
     <meta name="twitter:image:alt" content="The MijiaLAN icon next to a living room lit by a desk lamp." />
     <link rel="icon" type="image/png" href="../assets/mijialan-icon.png" />
     <link rel="stylesheet" href="../styles.css?v=regional-analytics" />
-    <script defer src="../downloads.js"></script>
+    <script defer src="../downloads.js?v=rs-0.2.0-b16"></script>
     <script defer src="../analytics.js?v=regional-analytics"></script>
   </head>
   <body>
@@ -142,24 +142,24 @@
                 type="button"
                 data-option-platform="windows"
                 data-label="Download for Windows"
-                data-requirements="Preview · Windows x64 · MSI"
+                data-requirements="Stable · Windows x64 · MSI"
                 data-release-label="Installation notes"
                 aria-pressed="false"
               >
                 <strong>Windows</strong>
-                <small>Preview · x64 MSI</small>
+                <small>Stable · x64 MSI</small>
                 <svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg>
               </button>
               <button
                 type="button"
                 data-option-platform="linux"
                 data-label="Download for Linux"
-                data-requirements="Preview · Debian 12 / Ubuntu 24.04 · x86-64 · DEB"
+                data-requirements="Stable · Debian 12 / Ubuntu 24.04 · x86-64 · DEB"
                 data-release-label="Other formats"
                 aria-pressed="false"
               >
                 <strong>Linux</strong>
-                <small>Preview · x86-64 DEB</small>
+                <small>Stable · x86-64 DEB</small>
                 <svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg>
               </button>
             </div>
@@ -358,24 +358,32 @@
                 <svg class="icon" aria-hidden="true"><use href="#icon-download" /></svg> Download for macOS
               </a>
             </div>
-            <ul class="platform-links" aria-label="Other platforms">
+            <ul class="platform-links" aria-label="Other editions and platforms">
+              <li>
+                <a href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-v0.2.0-b16"
+                  ><span>macOS (Rust)</span
+                  ><span class="platform-status"
+                    >0.2.0 stable
+                    <svg class="icon" aria-hidden="true"><use href="#icon-external" /></svg></span
+                ></a>
+              </li>
               <li>
                 <a
                   id="release-windows"
-                  href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-v0.1.0-b14"
+                  href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-v0.2.0-b16"
                   ><span>Windows</span
                   ><span class="platform-status"
-                    >Rust preview
+                    >Rust 0.2.0 stable
                     <svg class="icon" aria-hidden="true"><use href="#icon-external" /></svg></span
                 ></a>
               </li>
               <li>
                 <a
                   id="release-linux"
-                  href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-linux-v0.1.0-b1"
+                  href="https://github.com/iPocket-APP/MijiaLAN/releases/tag/rs-v0.2.0-b16"
                   ><span>Linux</span
                   ><span class="platform-status"
-                    >Rust preview
+                    >Rust 0.2.0 stable
                     <svg class="icon" aria-hidden="true"><use href="#icon-external" /></svg></span
                 ></a>
               </li>
